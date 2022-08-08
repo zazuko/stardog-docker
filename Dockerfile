@@ -1,4 +1,4 @@
-FROM docker.io/stardog/stardog:8.0.0-java11-preview
+FROM docker.io/stardog/stardog:8.0.1-java11-preview
 
 ARG OTEL_VERSION=1.16.0
 
