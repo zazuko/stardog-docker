@@ -1,6 +1,6 @@
 FROM docker.io/stardog/stardog:8.1.0-java11-preview
 
-ARG OTEL_VERSION=1.16.0
+ARG OTEL_VERSION=1.17.0
 
 RUN mkdir -p /opt/stardog/opentelemetry
 
