@@ -9,3 +9,8 @@ services:
       - 5820:5820
     volumes:
       - ./volumes/stardog:/var/opt/stardog
+
+  studio:
+    image: stardog/stardog-studio:current
+    ports:
+      - 8080:8080
