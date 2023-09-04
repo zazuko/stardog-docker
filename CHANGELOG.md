@@ -1,5 +1,11 @@
 # stardog-docker
 
+## 0.8.3
+
+### Patch Changes
+
+- 9a89925: Upgrade Stardog to 9.1.1 (#13)
+
 ## 0.8.2
 
 ### Patch Changes
