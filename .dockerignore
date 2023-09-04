@@ -2,3 +2,9 @@
 .github
 .gitignore
 volumes/
+
+# changesets
+node_modules/
+.changeset/
+yarn.lock
+package.json
