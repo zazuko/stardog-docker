@@ -2,8 +2,6 @@ name: Build and push Docker image
 
 on:
   push:
-    branches:
-      - "**"
     tags:
       - "v*.*.*"
 
@@ -15,9 +13,15 @@ jobs:
       contents: read
       packages: write
 
+    env:
+      DOCKER_IMAGE: ghcr.io/zazuko/stardog
+
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v2
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
@@ -30,12 +34,18 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Docker meta
-        uses: zazuko/action-docker-meta@main
         id: docker_meta
+        uses: docker/metadata-action@v4
         with:
-          images: ghcr.io/zazuko/stardog
+          images: "${{ env.DOCKER_IMAGE }}"
+          tags: |
+            type=ref,event=branch
+            type=semver,prefix=v,pattern={{version}}
+            type=semver,prefix=v,pattern={{major}}.{{minor}}
+            type=semver,prefix=v,pattern={{major}}
+            type=sha
 
-      - name: Build and push Docker images
+      - name: Build and push Docker image
         id: docker_build
         uses: docker/build-push-action@v4
         with:
@@ -44,3 +54,7 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.docker_meta.outputs.tags }}
           labels: ${{ steps.docker_meta.outputs.labels }}
+          platforms: |
+            linux/amd64
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
