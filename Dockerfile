@@ -1,4 +1,4 @@
-FROM docker.io/library/eclipse-temurin:11-jre-jammy
+FROM --platform=linux/amd64 docker.io/library/eclipse-temurin:11-jre-jammy
 
 ARG OTEL_VERSION="1.29.0"
 ARG STARDOG_VERSION="8.2.2"
