@@ -2,7 +2,7 @@
 
 This is a non-official Docker image for Stardog.
 
-It includes the OpenTelemetry instrumentation agent.
+It includes the Java OpenTelemetry instrumentation agent.
 
 ## Quick Start
 
