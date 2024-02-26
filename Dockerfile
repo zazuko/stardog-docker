@@ -1,6 +1,6 @@
 FROM --platform=linux/amd64 docker.io/library/eclipse-temurin:11-jre-jammy
 
-ARG OTEL_VERSION="1.32.0"
+ARG OTEL_VERSION="2.1.0"
 ARG STARDOG_VERSION="9.2.1"
 
 ENV STARDOG_HOME="/var/opt/stardog"
