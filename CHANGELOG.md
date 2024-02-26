@@ -1,5 +1,15 @@
 # stardog-docker
 
+## 0.9.0
+
+### Minor Changes
+
+- 3e3a49b: Upgrade Stardog to 10.0.0 (#33)
+
+### Patch Changes
+
+- e012443: Upgrade OTEL to 2.1.0
+
 ## 0.8.5
 
 ### Patch Changes
