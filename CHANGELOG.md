@@ -1,5 +1,12 @@
 # stardog-docker
 
+## 0.9.1
+
+### Patch Changes
+
+- e5263b5: Upgrade OpenTelemetry Java instrumentation to 2.3.0
+- 1496630: Upgrade Stardog to 10.0.1
+
 ## 0.9.0
 
 ### Minor Changes
