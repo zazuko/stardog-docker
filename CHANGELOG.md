@@ -1,5 +1,11 @@
 # stardog-docker
 
+## 0.9.3
+
+### Patch Changes
+
+- 0488c2a: Upgrade Stardog to 10.1.1 (#47)
+
 ## 0.9.2
 
 ### Patch Changes
