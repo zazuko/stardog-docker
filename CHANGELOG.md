@@ -1,5 +1,12 @@
 # stardog-docker
 
+## 0.9.5
+
+### Patch Changes
+
+- fdd2e84: Upgrade Stardog to 10.2.1
+- fdd2e84: Upgrade OTEL Java instrumentation to 2.10.0
+
 ## 0.9.4
 
 ### Patch Changes
