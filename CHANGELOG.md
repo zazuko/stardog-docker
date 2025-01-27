@@ -1,5 +1,11 @@
 # stardog-docker
 
+## 0.10.0
+
+### Minor Changes
+
+- 0a6cb79: Upgrade Stardog to 11.0.0
+
 ## 0.9.6
 
 ### Patch Changes
